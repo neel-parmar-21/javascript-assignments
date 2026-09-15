@@ -1,0 +1,63 @@
+<!-- Q11 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Alert</title>
+</head>
+<body>
+
+    <button onclick="showMessage()">Click Me</button>
+
+    <script>
+        function showMessage() {
+            alert("Welcome to JavaScript!");
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- Q12 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Driven Programming</title>
+</head>
+<body>
+
+    <button id="myBtn">Click Me</button>
+
+    <p id="demo">Hello!</p>
+
+    <script>
+        document.getElementById("myBtn").onclick = function() {
+            document.getElementById("demo").innerHTML = "Button was clicked!";
+        };
+    </script>
+
+</body>
+</html>
+
+<!-- Q13 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>My First JavaScript Page</h1>
+
+    <button onclick="changePage()">Click Me</button>
+
+    <script>
+        console.log("JavaScript is running successfully!");
+
+        function changePage() {
+            alert("Hello, B.Tech Student!");
+            document.body.style.backgroundColor = "lightblue";
+        }
+    </script>
+
+</body>
+</html>
