@@ -167,16 +167,3 @@ let thirdNumber = 3; // Added meaningful name to variable
 const PI = 3.14159; // Changed pi to const and rename to PI (uppercase).
 let userName = "John"; // Renamed username to userName (camelCase).
 let itemCount = 0; // Renamed itemcount to itemCount (camelCase).
-
-
-
-
-
-
-
-
-
-
-
-
-
