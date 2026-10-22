@@ -198,8 +198,7 @@ function checkPass(m1, m2, m3) {
     let avg = (m1 + m2 + m3) / 3;
     return avg >= 40 ? "Pass" : "Fail"
 }
-
-let result = checkPass(50, 70, 90);
+result = checkPass(50, 70, 90);
 
 console.log(result);
 
@@ -225,9 +224,118 @@ function main() {
 
 console.log(main());
 
+function processMarks (m1, m2){
+    function sum(){
+        let total = m1 + m2;
+        return total;
+    }
+
+    return sum();
+};
+
+console.log(processMarks(10, 20))
+
+// OR
+
+function processMarks (m1, m2){
+    function sum(){
+        let total = m1 + m2;
+        return total;
+    }
+
+    return sum();
+};
+
+let result = processMarks(10, 20);
+console.log(result)
 
 
+function studentSummary(name, m1, m2, m3) {
+    function findTotal() {
+        let total = m1 + m2 + m3;
+        return total;
+    }
+
+    function findAverage() {
+        let average = (m1 + m2 + m3) / 3;
+        return average;
+    }
+
+    return `Student Name: ${name}
+Average Marks: ${findAverage()}
+Total Marks: ${findTotal()}`
+    ;
+}
+
+result = studentSummary("Neel", 75, 68, 79);
+
+console.log(result)
 
 
+// Scope in JavaScript => defines where we can access the variables in our program
+
+// 1. Global Scope
+// 2. Functional Scope
+
+// Global Scope => variables declared outside the function are in global scope and can be accessed everywhere
+
+var college = "CodingGita"
+
+function showCollege() {
+    console.log(college)
+}
+
+showCollege();
+console.log(college);
 
 
+// Function Scope => variable inside the function are in functional scope, can access inside the function only.
+
+
+function myFunc() {
+    var x = 10;
+    console.log(x)
+};
+
+myFunc();
+console.log(x) //Error => ReferenceError 
+
+// Block Scope => variable inside any {} not belonging to a function are in a block scope and can access inside the block only
+// (if is not declared with var);
+
+// var = > totally ignores the block scope
+
+
+if (true) {
+    let y = 20;
+    console.log(y); // 20
+}
+
+console.log(y); // ReferenceError: y is not defined
+
+
+if (true) {
+    const y = 20;
+    console.log(y); // 20
+}
+
+console.log(y); // ReferenceError: y is not defined
+
+
+if (true) {
+    var y = 20;
+    console.log(y); // 20
+}
+
+console.log(y); // 20
+
+
+function myFunc(){
+
+    for(var i=1; i<=5; i++) {
+        console.log("Inner i", i) // prints from 1-5
+    };
+    console.log("Outer i", i) // prints from 1-5
+}
+
+myFunc();
